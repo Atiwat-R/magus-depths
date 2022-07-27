@@ -1,2 +1,2 @@
-# magus-depths
+# Magus Depths
 A 3D shooter game made with Unity 2022.1
