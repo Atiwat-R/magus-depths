@@ -23,6 +23,10 @@ public class InputManager : MonoBehaviour
         playerLook = GetComponent<PlayerLook>();
 
         onFoot.Jump.performed += ctx => playerMotor.Jump();
+
+        //Set Cursor to not be visible & locked (Use Ctrl+P to exit Play Mode)
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
