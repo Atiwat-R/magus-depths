@@ -44,8 +44,15 @@ public class PlayerThrowing : MonoBehaviour
         // Get projectile RigidBody
         Rigidbody projectileRB = projectile.GetComponent<Rigidbody>();
 
+        // Calculate direction
+        Vector3 forceDiraction = cam.transform.forward;
+        RaycastHit hit;
+        if (Physics.Raycast(cam.position, cam.forward, out hit, 500f)) {
+            forceDiraction = (hit.point - attackPoint.position).normalized;
+        }
+
         // Create force Vector, in the direction we're looking
-        Vector3 forceToAdd = cam.transform.forward * throwForce + transform.up * throwUpwardForce;
+        Vector3 forceToAdd = forceDiraction * throwForce + transform.up * throwUpwardForce;
 
         // Add force to projectile
         projectileRB.AddForce(forceToAdd, ForceMode.Impulse); // ForceMode.Impulse for adding the force only once

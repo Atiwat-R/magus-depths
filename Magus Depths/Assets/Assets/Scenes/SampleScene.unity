@@ -190,7 +190,7 @@ MonoBehaviour:
   totalThrows: 100
   throwCooldown: 0.1
   throwKey: 323
-  throwForce: 70
+  throwForce: 30
   throwUpwardForce: 0
 --- !u!1 &410087039
 GameObject:
@@ -954,12 +954,12 @@ PrefabInstance:
     - target: {fileID: 1823316737339582311, guid: 2129f70dd42763742ae48e6d9e2b3e51,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.1261365
+      value: -3.246
       objectReference: {fileID: 0}
     - target: {fileID: 1823316737339582311, guid: 2129f70dd42763742ae48e6d9e2b3e51,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.1158357
+      value: 13.18
       objectReference: {fileID: 0}
     - target: {fileID: 1823316737339582311, guid: 2129f70dd42763742ae48e6d9e2b3e51,
         type: 3}
