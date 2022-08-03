@@ -14,9 +14,8 @@ public class InputManager : MonoBehaviour
 
     private PlayerMotor playerMotor;
     private PlayerLook playerLook;
+    private PlayerThrowing playerThrowing;
 
-
-    // Start is called before the first frame update
     void Awake()
     {
         playerInput = new PlayerInput();
@@ -24,8 +23,11 @@ public class InputManager : MonoBehaviour
 
         playerMotor = GetComponent<PlayerMotor>();
         playerLook = GetComponent<PlayerLook>();
+        playerThrowing = GetComponent<PlayerThrowing>();
 
+        // Button is pressed, Action is performed
         onFoot.Jump.performed += ctx => playerMotor.Jump();
+        onFoot.Throw.performed += ctx => playerThrowing.Throw();
 
         //Set Cursor to not be visible & locked (Use Ctrl+P to exit Play Mode)
         Cursor.visible = false;

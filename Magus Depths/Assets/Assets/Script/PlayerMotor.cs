@@ -40,6 +40,7 @@ public class PlayerMotor : MonoBehaviour
         controller.Move(playerVelocity * Time.deltaTime);
     }
 
+    // This function is called by InputManager whenever button assigned in InputSystem is pressed
     public void Jump() {
         if (isGrounded) {
             playerVelocity.y = Mathf.Sqrt(jumpHeight * -3.0f * gravity);

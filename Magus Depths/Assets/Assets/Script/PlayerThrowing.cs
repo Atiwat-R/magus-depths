@@ -27,21 +27,15 @@ public class PlayerThrowing : MonoBehaviour
         readyToThrow = true;
     }
 
-    private void Update() {
-        if (Input.GetKeyDown(throwKey) && readyToThrow && totalThrows>0) {
-            Throw();
+    // This function is called by InputManager whenever button assigned in InputSystem is pressed
+    public void Throw() {
+        if (readyToThrow && totalThrows>0) {
+            ThrowLogic();
         }
-        Debug.Log("INN");
     }
 
-    // public void ThrowUpdate() {
-    //     if (Input.GetKeyDown(throwKey) && readyToThrow && totalThrows>0) {
-    //         Throw();
-    //     }
-    //     Debug.Log("INN");
-    // }
-
-    private void Throw() {
+    // Helper function for Throw(). Contains logic for throwing projectile
+    private void ThrowLogic() {
         readyToThrow = false;
 
         // Instantiate projectile
