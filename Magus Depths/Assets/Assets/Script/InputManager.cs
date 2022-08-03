@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+// This script match Inputs from InputSystem with actions
+// which are functions imported from each script
+
 public class InputManager : MonoBehaviour
 {
 
